@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import json
 import logging
 from pathlib import Path
@@ -447,7 +448,8 @@ class LanguageAndVisionConcat(torch.nn.Module):
 if __name__ == '__main__':
     pass
     print("OK")
-    data_dir = Path.cwd()  / "meme_data"
+    data_dir = Path.cwd()  / "data"
+    print(Path.cwd())
     print("OK")
     #img_tar_path = data_dir / "img.tar.gz"
     train_path = data_dir / "train.jsonl"
@@ -497,7 +499,7 @@ if __name__ == '__main__':
         "dev_limit": None,
         "lr": 0.00005,
         "max_epochs": 10,
-        "n_gpu": 1,
+        "n_gpu": 0,
         "batch_size": 4,
         # allows us to "simulate" having larger batches
         "accumulate_grad_batches": 16,
