@@ -67,7 +67,7 @@ def writeFiles(path:str,title:str,desc:[[]],  img_features:[[]],numpy_form_txts:
 
 def test():
     image_ex_path="/home/data/meme_data/"
-    data_ex_path="/home/jupyter/Hateful_Memes_Data/babyData/train.jsonl"
+    data_ex_path="/home/jupyter/Hateful_Memes_Data/babyData/test.jsonl"
     bert_path="/home/jupyter/ThreeDAnime/bert_folder"
     featurized_data_path="/home/data/meme_challenge_mod_data/"
     
@@ -89,7 +89,7 @@ def test():
     desc=[]
     numpy_form_txts=[]
     numpy_form_ims=[]
-    for i in range(100):
+    for i in range(len(data)):
         print(i)
         try:
             im=Image.open(os.path.join(image_ex_path,data[i]["img"]))
