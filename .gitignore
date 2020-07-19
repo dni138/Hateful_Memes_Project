@@ -3,3 +3,6 @@ data
 model-outputs
 *.json
 *.txt
+*.tsv
+*.png
+*.jpeg
