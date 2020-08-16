@@ -40,7 +40,7 @@ parser.add_argument("-i","--image_path", help="path to the json files ",default=
 parser.add_argument("-d","--destination_path", help="path to place formatted data ",default=featurized_data_path)
 parser.add_argument("-n","--destination_name", help="name to append to each file ",default=name)
 
-
+#sudo /opt/conda/bin/python featurize_data_prelim.py -i  "/home/data/meme_data/" 
 
 #https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a THE ANIMAL THIS IS MOST ASSoICATED with = absolutely need to swap out with mask rcnn
 def extract_image_features_stupid(data, model, size):
@@ -135,6 +135,12 @@ def test(name,image_ex_path,data_ex_path,bert_path,featurized_data_path):
     writeFiles(featurized_data_path, name,desc,numpy_form_ims,numpy_form_txts)
     
 if __name__ == "__main__":
+    
+    '''
+    sudo /opt/conda/bin/python featurize_data_prelim.py -i  "/home/data/meme_data/"
+    
+    
+    '''
     args = parser.parse_args()
 
     test(args.destination_name,args.image_path,args.data_path,args.bert_path,args.destination_path)
