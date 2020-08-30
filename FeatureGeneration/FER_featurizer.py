@@ -7,9 +7,11 @@ class FER_Wrapper():
         self.detector = FER()
         
     def run_FER(self, path):
-        detector = self.detector()
+        detector = self.detector
         img = cv2.imread(path)
         image_name = os.path.basename(path)
         emotion_label = detector.detect_emotions(img)
+        if len(emotion_label) == 0:
+            emotion_label = 0
 
         return {image_name : emotion_label}
