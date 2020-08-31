@@ -14,7 +14,7 @@ from LoadingData import LoadingData
 class GettySimpleWrapper():
     
     def __init__(self):
-        self.data = LoadingData.LoadingData("~/Desktop/Hateful_Memes_Project/data/getty_data_full.csv")
+        self.data = LoadingData("~/Desktop/Hateful_Memes_Project/data/getty_data_full.csv")
     
     
     def clean_getty_data(self):
