@@ -42,7 +42,7 @@ class GettySimpleWrapper():
 
         for x in ['train','dev','test']:
             file="../data/"+x+".jsonl"
-            data=LoadingData.LoadingData(file)
+            data=LoadingData(file)
             data_json=data.load_data()
             df=pd.DataFrame(data_json)
             df['partition']=x
